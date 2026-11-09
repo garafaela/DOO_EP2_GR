@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="577.0" prefWidth="947.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="garafaela.doo_ep2_gr.controller.MainController">
+   <children>
+      <VBox prefHeight="577.0" prefWidth="618.0">
+         <children>
+            <TableView fx:id="tabla" prefHeight="479.0" prefWidth="582.0">
+              <columns>
+                <TableColumn fx:id="colTipo" prefWidth="123.0" text="Tipo" />
+                <TableColumn fx:id="colCodigo" prefWidth="114.0" text="Código" />
+                  <TableColumn fx:id="colDuracion" prefWidth="106.0" text="Duración (h)" />
+                  <TableColumn fx:id="colCupoMaximo" prefWidth="93.0" text="Cupos" />
+                  <TableColumn fx:id="colCosto" prefWidth="137.0" text="Costo" />
+              </columns>
+            </TableView>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label fx:id="lblMensaje" alignment="CENTER" prefHeight="99.0" prefWidth="464.0" wrapText="true" />
+                  <Button fx:id="btnEliminar" mnemonicParsing="false" onAction="#onEliminar" prefHeight="25.0" prefWidth="129.0" text="Eliminar" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <VBox prefHeight="577.0" prefWidth="418.0">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="52.0" prefWidth="412.0" text="Empresa Capacitación" />
+            <GridPane prefHeight="488.0" prefWidth="412.0">
+              <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="94.0" minWidth="4.0" prefWidth="12.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="173.0" minWidth="10.0" prefWidth="121.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="228.0" minWidth="10.0" prefWidth="224.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.0" minWidth="10.0" prefWidth="22.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints />
+                <RowConstraints maxHeight="67.0" minHeight="10.0" prefHeight="67.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="82.0" minHeight="10.0" prefHeight="53.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="81.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="83.0" minHeight="10.0" prefHeight="42.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="100.0" minHeight="10.0" prefHeight="88.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="124.0" minHeight="10.0" prefHeight="48.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="60.0" minHeight="10.0" prefHeight="25.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="43.0" minHeight="6.0" prefHeight="19.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="90.0" minHeight="10.0" prefHeight="90.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <ComboBox fx:id="cmbTipo" onAction="#onTipo" prefHeight="25.0" prefWidth="185.0" promptText="Seleccione..." GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <Button fx:id="btnRegistrar" disable="true" mnemonicParsing="false" onAction="#onRegistrar" prefHeight="25.0" prefWidth="210.0" text="Registrar" GridPane.columnIndex="2" GridPane.rowIndex="9" />
+                  <CheckBox fx:id="chbEvaluacionFinalAlDia" disable="true" mnemonicParsing="false" prefHeight="17.0" prefWidth="180.0" text="Evaluación Final al Día" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+                  <CheckBox fx:id="chbDiplomaEmitido" disable="true" mnemonicParsing="false" prefHeight="17.0" prefWidth="181.0" text="Diploma Emitido" GridPane.columnIndex="2" GridPane.rowIndex="8" />
+                  <TextField fx:id="txtCertificadora" disable="true" promptText="&quot;ChileValora&quot;" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+                  <TextField fx:id="txtInscritos" disable="true" promptText="Mínimo 1" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                  <TextField fx:id="txtCupoMaximo" disable="true" promptText="Mínimo 1" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                  <TextField fx:id="txtDuracion" disable="true" promptText="Entre 4 y 200" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                  <TextField fx:id="txtCodigo" disable="true" promptText="&quot;CUR-L01&quot;" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                  <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="17.0" prefWidth="178.0" text="Código " GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="43.0" layoutY="84.0" prefHeight="17.0" prefWidth="178.0" text="Entidad Certificadora " GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                  <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="43.0" layoutY="98.0" prefHeight="17.0" prefWidth="178.0" text="Cantidad Inscritos " GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                  <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="43.0" layoutY="98.0" prefHeight="17.0" prefWidth="178.0" text="Cupo Máximo " GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="43.0" layoutY="98.0" prefHeight="17.0" prefWidth="178.0" text="Duración (h) " GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="43.0" layoutY="84.0" prefHeight="17.0" prefWidth="178.0" text="Tipo de Curso " GridPane.columnIndex="1" GridPane.rowIndex="1" />
+               </children>
+            </GridPane>
+         </children>
+      </VBox>
+   </children>
+</HBox>
